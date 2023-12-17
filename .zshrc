@@ -1,5 +1,14 @@
+fastfetch
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
+start=`date +%s.%N`
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -8,7 +17,8 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+#ZSH_THEME="robbyrussell"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -70,10 +80,17 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git fzf)
+plugins=(
+  git
+  fzf
+  colored-man-pages
+  z
+  zsh-autosuggestions
+)
 
 source $ZSH/oh-my-zsh.sh
 
+#eval "$(starship init zsh)"
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -102,6 +119,7 @@ source $ZSH/oh-my-zsh.sh
 # from .bashrc
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+#"$HOME/.zsh/zsh-nvm-lazy-load.plugin.zsh"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 export PATH="$HOME/.pyenv/bin:$PATH"
@@ -127,6 +145,22 @@ alias gcssh=clone-with-ssh-git
 export PATH=$HOME/.go/1.19/bin:$PATH
 export PATH=/home/linuxbrew/.linuxbrew/bin:$PATH
 export PATH=$PATH:~/.local/bin
+#export PATH=$PATH:~/.local
 
-neofetch --sixel ~/Pictures/avatars/8cc4676c55cad4252b364ea5114bfd70c0542765_full-193235354.png
-alias neo="neofetch --sixel ~/Pictures/avatars/8cc4676c55cad4252b364ea5114bfd70c0542765_full-193235354.png --crop_mode fit"
+
+
+#neofetch --sixel ~/Pictures/avatars/8cc4676c55cad4252b364ea5114bfd70c0542765_full-193235354.png
+alias clear=fastfetch
+alias win="sudo grub-reboot 1"
+
+end=`date +%s.%N`
+runtime=$( echo "$end - $start" | bc -l )
+
+# set us keyboard
+setxkbmap -layout 'us(altgr-intl)'
+
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+source ~/.zsh/catppuccin_frappe-zsh-syntax-highlighting.zsh
+source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

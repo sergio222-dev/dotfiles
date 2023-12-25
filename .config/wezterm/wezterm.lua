@@ -18,7 +18,7 @@ config.window_background_image_hsb = {
 
 	saturation = 1.0,
 }
-config.window_background_opacity = 0.9
+config.window_background_opacity = 0.8
 config.text_background_opacity = 1
 config.enable_tab_bar = true
 config.use_fancy_tab_bar = false

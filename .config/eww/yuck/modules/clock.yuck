@@ -1,0 +1,16 @@
+ (defwidget clock_z_module []
+  (bar_container
+    (bar_card
+     (label :text uptime_time))
+
+    (bar_card :spacing 2
+      (label :text clock_z_day)
+      (label :text "/")
+      (label :text clock_z_month))
+     
+    
+    (bar_card :spacing 0
+      (label :class "fs-16" :text "  ")
+      (label :text clock_time)
+      (label :text ":")
+      (label :text clock_minute))))

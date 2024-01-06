@@ -1,0 +1,70 @@
+.widget_left {
+  padding: 20px;
+  color: $black;
+  transition: all 200ms ease-in-out;
+
+  .widget_left_container {
+    box-shadow: $shadow;
+    background-color: $whiteBackground;
+
+    .widget_left_header {
+      color: $white;
+      background-color: $background;
+      font-style: italic;
+      box-shadow: $shadow_elevation_2;
+    }
+
+    .widget_left_footer {
+      background-color: $background;
+    }
+
+    .widget_left_profile {
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      box-shadow: $shadow_elevation_2;
+      border-style: solid;
+      border-color: $secondary;
+      border-width: 2px;
+      text-shadow: 2px 2px $black;
+    }
+
+    .widget_left_sound {
+
+      .sound_button {
+        background-color: $background;
+        border-radius: 4px;
+        font-size: 32px;
+        color: $foreground;
+
+        &:hover {
+          color: $secondary;
+        }
+      }
+
+
+      .scale scale trough {
+        background-color: $whiteBackground;
+        min-height: 0.9rem;
+        border-radius: 0.4rem;
+        padding: 4px;
+        border: 0.4rem solid $background;
+        color: red;
+      }
+
+      .scale scale highlight {
+        background-color: $secondary;
+      }
+
+      .scale scale slider {
+        background-color: red;
+      }
+    }
+
+  }
+}
+
+.widget_left_transparent {
+  opacity: 0;
+  margin-right: 2rem;
+}

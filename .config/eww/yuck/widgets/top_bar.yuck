@@ -1,0 +1,7 @@
+(defwidget top_bar []
+  (box :class "bar_class"
+       :orientation "h"
+ ;; (right)
+ ;; (center)
+   (left)))
+

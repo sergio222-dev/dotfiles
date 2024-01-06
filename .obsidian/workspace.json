@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "100 - Mecanicas/102 - Area de juego.md",
+                "file": "100 - Mecanicas/102 - Tipos de cartas.md",
                 "mode": "source",
                 "source": false
               }
@@ -174,7 +174,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "100 - Mecanicas/102 - Area de juego.md",
+                "file": "100 - Mecanicas/102 - Tipos de cartas.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -191,7 +191,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "100 - Mecanicas/102 - Area de juego.md",
+                "file": "100 - Mecanicas/102 - Tipos de cartas.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -214,7 +214,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "100 - Mecanicas/102 - Area de juego.md"
+                "file": "100 - Mecanicas/102 - Tipos de cartas.md"
               }
             }
           },
@@ -261,14 +261,14 @@
     "100 - Mecanicas/102 - Recursos.md",
     "100 - Mecanicas/102 - Area de juego.md",
     "100 - Mecanicas/101 - Condición de victoria.md",
-    "800 - Recursos/802 - play area.png",
-    "800 - Recursos/801 - unit card prototype.png",
-    "800 - Recursos/802 - play area.canvas",
+    "100 - Mecanicas/103 - Mano del jugador.md",
     "100 - Mecanicas/102 - Tipos de cartas.md",
+    "100 - Mecanicas/104 - Pila de retiro.md",
+    "800 - Recursos/801 - unit card prototype.png",
+    "800 - Recursos/802 - play area.png",
+    "800 - Recursos/802 - play area.canvas",
     "800 - Recursos",
     "card_prototype.psd",
-    "100 - Mecanicas/104 - Pila de retiro.md",
-    "100 - Mecanicas/103 - Mano del jugador.md",
     "100 - Mecanicas",
     "001 - INBOX/Procesar.canvas",
     "100 - PROJECTS/Revisar el funcionamiento de account.md",

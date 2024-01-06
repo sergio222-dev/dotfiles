@@ -1,0 +1,46 @@
+// ***** vars and utils *****
+@import "scss/variables";
+@import "scss/utils";
+
+// ***** widgets *****
+@import "scss/widgets/top.scss";
+@import "scss/widgets/widget_left.scss";
+
+* {
+  all: unset;
+  font-family: $mainFont;
+  font-weight: $fontBold;
+}
+
+.bar_class {
+  background-color: $bg-transparent;
+}
+
+// utils
+.fs-8 {
+  font-size: 8px;
+}
+
+.fs-12 {
+  font-size: 12px;
+}
+
+.fs-16 {
+  font-size: 16px;
+}
+
+.ps-8 {
+  padding: 0 8px;
+}
+
+.ps-16 {
+  padding: 0 16px;
+}
+
+.ps-24 {
+  padding: 0 24px;
+}
+
+.ps-32 {
+  padding: 0 32px;
+}

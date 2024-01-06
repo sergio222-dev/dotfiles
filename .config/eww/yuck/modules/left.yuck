@@ -1,0 +1,7 @@
+(defwidget left []
+  (box :orientation "h" 
+   :space-evenly false  
+      :halign "end"
+   :class "left_bar"
+   (clock_z_module)))
+

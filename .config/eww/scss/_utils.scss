@@ -1,0 +1,38 @@
+$sizes: 8, 12, 16, 20, 24, 28, 32;
+
+@each $size in $sizes {
+  .pl-#{$size} {
+    padding-left: #{$size}px;
+  }
+
+  .pr-#{$size} {
+    padding-right: #{$size}px;
+  }
+
+  .pt-#{$size} {
+    padding-top: #{$size}px;
+  }
+
+  .pb-#{$size} {
+    padding-bottom: #{$size}px;
+  }
+
+  .p-#{$size} {
+    padding: #{$size}px;
+  }
+}
+
+// ***** Utils *****
+.card {
+  background-color: $foreground;
+  border-radius: 12px;
+  color: $black;
+  padding: 4px 16px;
+}
+
+.container {
+  background-color: $background;
+  border-radius: 8px;
+  padding: 0 16px;
+  box-shadow: $shadow_elevation_16;
+}

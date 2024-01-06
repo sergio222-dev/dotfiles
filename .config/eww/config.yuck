@@ -1,0 +1,11 @@
+;; USER CONFIG
+(defpoll PF_NAME :interval "1h" "echo $USER")
+
+;; DISPLAY
+(defpoll DP_WIDTH :initial "1920" :interval "12h"
+ "scripts/display.sh --get_dp_width")
+(defpoll DP_HEIGHT :initial "1080" :interval "12h"
+ "scripts/display.sh --get_dp_height")
+
+(defvar CUR_WALL "images/currentwall/currentwall")
+(defvar CUR_WALL_BLUR "images/currentwall/currentwall_blur")

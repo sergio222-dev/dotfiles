@@ -1,0 +1,20 @@
+;; Clock variables
+(defpoll clock_z_day :interval "1h" "date '+%d'")
+(defpoll clock_z_month :interval "1h" "date '+%m'")
+(defpoll clock_time :interval "1m" "date +\%I")
+(defpoll clock_minute :interval "5s" "date +\%M")
+(defpoll clock_date :interval "10h" "date '+%d/%m'")
+
+;; Uptime variables
+(defpoll uptime_time :interval "1h" "uptime -p | cut -d ',' -f1")
+
+;; Sound variables
+(defpoll sound_system :initial 100 :interval "2s" "scripts/sound.sh --get-vol")
+
+;; BOX SIZING *****
+
+;; widget_left
+(defvar BOX_SIZE_LEFT_CONTAINER_W "5")
+(defvar BOX_SIZE_LEFT_CONTAINER_H "1.04")
+(defvar SHOW_WIDGET false)
+

@@ -1,0 +1,3 @@
+(defwidget bar_container []
+ (box :spacing 16 :class "container" :valign "center" :height 48 :space-evenly false
+     (children)))

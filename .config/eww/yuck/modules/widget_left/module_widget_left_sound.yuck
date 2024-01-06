@@ -1,0 +1,28 @@
+(defwidget module_widget_left_sound []
+  (box
+    :class "p-8 widget_left_sound"
+    :space-evenly false
+    :spacing 24
+    :halign "center"
+    (eventbox
+      :cursor "pointer"
+      :halign "center"
+      :valign "center"
+      :width 40
+      :height 40
+      :class "sound_button"
+      (button
+        (label
+          :xalign 0.49
+         :text "󰓃")))
+      
+    (box :class "scale" :width 160 :halign "center"
+      (scale
+        :min 0.0
+        :max 101.0
+        :value sound_system
+        :active true
+        :flipped false
+        :onchange "scripts/sound.sh --set-vol {}"))))
+      
+

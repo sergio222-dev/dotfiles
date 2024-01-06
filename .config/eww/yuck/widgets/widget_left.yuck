@@ -1,0 +1,18 @@
+(defwidget widget_left []
+  (box :class { SHOW_WIDGET ? "widget_left" : "widget_left widget_left_transparent"}
+    (box
+      :class "widget_left_container"
+      :orientation "v"
+      :space-evenly false
+      :width {round(DP_WIDTH / BOX_SIZE_LEFT_CONTAINER_W, 0)}
+      :height {round(DP_HEIGHT / BOX_SIZE_LEFT_CONTAINER_H, 0)}
+      (box :class "widget_left_header" :valign "start" :height 56
+        (label :text "Ahoy!! ~~"))
+      (box :vexpand true :orientation "v" :space-evenly false :spacing 0  :class "pt-12 pl-32 pr-32"
+        ;; wallpaper image
+        (module_widget_left_profile)
+        ;; sound selector
+        (module_widget_left_sound)
+        (box (label :text "OTRA"))
+      )
+      (box :class "widget_left_footer" :height 24))))

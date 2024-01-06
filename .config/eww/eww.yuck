@@ -1,0 +1,20 @@
+;; ***** Variables *****
+(include "config.yuck")
+(include "variables.yuck")
+
+;; ***** Utils *****
+(include "yuck/modules/bar_card.yuck")
+(include "yuck/modules/bar_container.yuck")
+
+;; ***** Modules *****
+(include "yuck/modules/clock.yuck")
+(include "yuck/modules/widget_left/module_widget_left_profile.yuck")
+(include "yuck/modules/widget_left/module_widget_left_sound.yuck")
+
+;; ***** Widgets *****
+(include "yuck/modules/left.yuck")
+(include "yuck/widgets/top_bar.yuck")
+(include "yuck/widgets/widget_left.yuck")
+
+;; ***** Windows *****
+(include "windows.yuck")

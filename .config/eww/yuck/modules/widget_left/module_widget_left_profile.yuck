@@ -1,0 +1,11 @@
+(defwidget module_widget_left_profile []
+  (box
+    :class "widget_left_profile"
+    :halign "fill"
+    :valign "start"
+    ;; @TODO change height
+    :height 200
+    :style "
+    background-image: url('${CUR_WALL_BLUR}');
+    "
+  ))

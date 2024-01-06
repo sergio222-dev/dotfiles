@@ -1,0 +1,4 @@
+(defwidget bar_card [?spacing ?height]
+ (box :spacing {spacing ?: 8} :class "card" :valign "center" :space-evenly false :height {height ?: 32}  
+  (children)))
+ 

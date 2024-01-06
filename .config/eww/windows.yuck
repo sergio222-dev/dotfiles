@@ -1,0 +1,21 @@
+(defwindow window_top_bar
+ :monitor 0
+ :geometry (geometry :x "0%"
+            :y "0%"
+            :width "100%"
+                    :height "64px"
+                       :anchor "top center")
+ :stacking "bg"
+ :wm-ignore false
+ :windowtype "dock"
+ (top_bar))
+
+(defwindow window_left
+ :monitor 0
+ :geometry (geometry
+            :anchor "left center")
+ :stacking "bg"
+ :wm-ignore true
+ :reserve (struts :distance "100px" :side "left")
+ :windowtype "dock"
+ (widget_left))

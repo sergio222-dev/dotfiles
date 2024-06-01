@@ -1,0 +1,3 @@
+[submodule "secure_dotfiles"]
+	path = secure_dotfiles
+	url = git@github.com:sergio222-dev/secure_dotfiles.git

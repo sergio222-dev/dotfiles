@@ -73,6 +73,9 @@ run_cmd() {
 			amixer set Master mute
 			systemctl suspend
 		elif [[ $1 == '--logout' ]]; then
+
+			wm_output=$(wmctrl -m)
+
 			if [[ "$DESKTOP_SESSION" == 'openbox' ]]; then
 				openbox --exit
 			elif [[ "$DESKTOP_SESSION" == 'bspwm' ]]; then
@@ -81,6 +84,8 @@ run_cmd() {
 				i3-msg exit
 			elif [[ "$DESKTOP_SESSION" == 'plasma' ]]; then
 				qdbus org.kde.ksmserver /KSMServer logout 0 0 0
+			elif echo "$wm_output" | grep -q 'awesome'; then
+				awesome-client 'awesome.quit()'
 			fi
 		fi
 	else

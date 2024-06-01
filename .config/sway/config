@@ -211,7 +211,7 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exec "swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit sway' 'swaymsg exit'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -391,16 +391,16 @@ bindsym $mod+Control+k exec --no-startup-id ~/.config/eww/scripts/launcher.sh
 bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
 
-exec --no-startup-id /home/sergio/.config/eww/scripts/wallpaper.sh --set-wall
-exec --no-startup-id "/usr/bin/bash ~/.scripts/set_keyboard.sh"
+# exec --no-startup-id /home/sergio/.config/eww/scripts/wallpaper.sh --set-wall
+# exec --no-startup-id "/usr/bin/bash ~/.scripts/set_keyboard.sh"
 
 # Remove borders
 default_border pixel 2
 # smart_borders on
 # hide_edge_borders both
 
-for_window [all] title_window_icon padding 8px
-for_window [class="smile"] floating enable
-for_window [floating] resize set 1200 700
+#for_window [all] title_window_icon padding 8px
+#for_window [class="smile"] floating enable
+#for_window [floating] resize set 1200 700
 
-include ~/.config/i3/themes/catppuccin-frappe.config
+# include ~/.config/i3/themes/catppuccin-frappe.config

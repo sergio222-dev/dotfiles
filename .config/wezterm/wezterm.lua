@@ -7,7 +7,7 @@ if wezterm.config_builder then
 	config = wezterm.config_builder()
 end
 
-config.color_scheme = "Catppuccin Frappe"
+config.color_scheme = "Campbell"
 config.hide_tab_bar_if_only_one_tab = false
 
 -- config.window_background_image = '/home/sergio/Pictures/wallpapers/deaths-gambit-artwork.jpg'

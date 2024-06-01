@@ -128,6 +128,8 @@ eval "$(pyenv virtualenv-init -)"
 
 alias k9s=/snap/k9s/current/bin/k9s
 
+export PATH="$HOME/.local/share/JetBrains/Toolbox/scripts:$PATH"
+
 function set-ssh-git() {
   command git config --add --local core.sshCommand "ssh -i ~/.ssh/$1"
 }
@@ -150,14 +152,20 @@ export PATH=$PATH:~/.local/bin
 
 
 #neofetch --sixel ~/Pictures/avatars/8cc4676c55cad4252b364ea5114bfd70c0542765_full-193235354.png
-alias clear=fastfetch
+
+function clear-and-fastfetch() {
+  command clear && fastfetch
+}
+
+alias clear=clear-and-fastfetch
+alias c=clear
 alias win="sudo grub-reboot 1"
 
 end=`date +%s.%N`
 runtime=$( echo "$end - $start" | bc -l )
 
 # set us keyboard
-setxkbmap -layout 'us(altgr-intl)'
+# setxkbmap -layout 'us(altgr-intl)'
 
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.

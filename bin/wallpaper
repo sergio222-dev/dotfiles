@@ -1,8 +1,8 @@
 #!/bin/bash
 
-ewwPath="$HOME/.config/eww"
+#ewwPath="$HOME/.config/eww"
 
-wallPath="$ewwPath/images/currentwall"
+#wallPath="$ewwPath/images/currentwall"
 
 function set_background() {
 	if [ ! -d $HOME/Pictures ]; then
@@ -18,14 +18,14 @@ function set_background() {
 	path=$(ls -1 $HOME/Pictures/wallpapers/* | shuf -n 1)
 
 	# Create link to the original source
-	rm -f $wallPath/*
-	ln -s $path $wallPath/currentwall
+	#rm -f $wallPath/*
+	#ln -s $path $wallPath/currentwall
 
 	# Create wal colors
 	# wal -i $wallPath/currentwall
 
 	# Create Blurred version
-	convert $wallPath/currentwall -blur 0x8 $wallPath/currentwall_blur
+	#convert $wallPath/currentwall -blur 0x8 $wallPath/currentwall_blur
 
 	# Set wallpaper
 	feh --bg-fill $path
@@ -33,6 +33,6 @@ function set_background() {
 
 if [[ $1 == "--set-wall" ]]; then
 	set_background
-elif [[ $1 == "--get-blur-wall" ]]; then
-	echo "$wallPath/currentwall_blur"
+#elif [[ $1 == "--get-blur-wall" ]]; then
+#	echo "$wallPath/currentwall_blur"
 fi

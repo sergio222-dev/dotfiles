@@ -1,6 +1,5 @@
 {
   "extras": [
-    "lazyvim.plugins.extras.coding.codeium",
     "lazyvim.plugins.extras.formatting.prettier",
     "lazyvim.plugins.extras.lang.docker",
     "lazyvim.plugins.extras.lang.go",
@@ -12,7 +11,7 @@
     "lazyvim.plugins.extras.vscode"
   ],
   "news": {
-    "NEWS.md": "2123"
+    "NEWS.md": "4964"
   },
-  "version": 2
+  "version": 5
 }

@@ -11,10 +11,16 @@
 (include "yuck/modules/widget_left/module_widget_left_profile.yuck")
 (include "yuck/modules/widget_left/module_widget_left_sound.yuck")
 
+(include "yuck/modules/menu_option.yuck")
+
 ;; ***** Widgets *****
 (include "yuck/modules/left.yuck")
 (include "yuck/widgets/top_bar.yuck")
 (include "yuck/widgets/widget_left.yuck")
+
+(include "yuck/widgets/settings.yuck")
+(include "yuck/widgets/menu_widget.yuck")
+(include "yuck/widgets/dialog_widget.yuck")
 
 ;; ***** Windows *****
 (include "windows.yuck")

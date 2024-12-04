@@ -36,3 +36,11 @@ $sizes: 8, 12, 16, 20, 24, 28, 32;
   padding: 0 16px;
   box-shadow: $shadow_elevation_16;
 }
+
+.hidden {
+  opacity: 0;
+}
+
+.debug {
+  border: 1px solid red;
+}

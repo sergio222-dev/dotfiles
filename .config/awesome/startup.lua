@@ -7,7 +7,7 @@ local startup = {}
 startup.init = function()
     --apps.thunderbird()
     apps.discord()
-    apps.picom()
+--     apps.picom()
     awful.spawn.with_shell("dex -a -e awesome & disown")
 end
 

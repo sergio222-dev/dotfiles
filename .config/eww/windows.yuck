@@ -6,7 +6,7 @@
                     :height "64px"
                        :anchor "top center")
  :stacking "bg"
- :wm-ignore false
+ :wm-ignore true
  :windowtype "dock"
  (top_bar))
 
@@ -14,8 +14,41 @@
  :monitor 0
  :geometry (geometry
             :anchor "left center")
- :stacking "bg"
+ :stacking "fg"
  :wm-ignore true
  :reserve (struts :distance "100px" :side "left")
  :windowtype "dock"
  (widget_left))
+
+(defwindow menu
+  :monitor 0
+  :geometry (geometry
+              :anchor "center"
+              :width "100%"
+              :height "100%")
+  :stacking "overlay"
+  :wm-ignore false
+  :focusable false
+  (menu_widget))
+
+(defwindow settings
+  :monitor 0
+  :geometry (geometry
+              :anchor "center"
+              :width "50%"
+              :height "50%")
+  :stacking "overlay"
+  :focusable false
+  (settings_widget))
+
+(defwindow dialog_window [text onyes onno]
+  :monitor 0
+  :geometry (geometry
+              :anchor "center"
+              :width "400px"
+              :height "150px")
+  :stacking "overlay"
+  (dialog_widget
+    :text text
+    :onyes onyes
+    :onno onno))

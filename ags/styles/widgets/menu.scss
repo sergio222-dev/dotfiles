@@ -1,0 +1,35 @@
+.menu_window {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.menu_widget_class {
+
+  .menu_option {
+    min-width: 200px;
+    color: white;
+    font-family:
+            JetBrains Mono,
+            "sans-serif";
+    font-size: 48px;
+
+    button {
+      all: unset;
+      color: white;
+
+      &:hover {
+        color: #fdfede;
+      }
+    }
+
+    &:hover {
+      color: #fdfede;
+      background: linear-gradient(
+                      0deg,
+                      transparent,
+                      rgba(1, 42, 74, 0.6) 25%,
+                      rgba(1, 42, 74, 0.6) 75%,
+                      transparent
+      );
+    }
+  }
+}

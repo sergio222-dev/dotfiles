@@ -1,0 +1,18 @@
+(defwidget dialog_widget [text onyes onno]
+  (box :class "window" :orientation "v"
+    (label 
+      :text text)
+    (box
+      :halign "center"
+      :spacing 44
+      :space-evenly false
+      (button
+        :width 120
+        :onclick "${onyes}"
+        (label
+          :text "YES"))
+     (button 
+       :width 120
+       :onclick "${onno}"
+       (label
+         :text "NO")))))

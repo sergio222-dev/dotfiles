@@ -1,15 +1,20 @@
 // ***** vars and utils *****
 @import "scss/variables";
 @import "scss/utils";
+@import "scss/shared/window";
 
 // ***** widgets *****
 @import "scss/widgets/top.scss";
 @import "scss/widgets/widget_left.scss";
+@import "scss/widgets/settings.scss";
+@import "scss/widgets/menu.scss";
 
+// **** all scss ****
 * {
   all: unset;
   font-family: $mainFont;
   font-weight: $fontBold;
+  //transition: all 200ms ease-in-out;
 }
 
 .bar_class {

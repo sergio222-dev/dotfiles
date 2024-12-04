@@ -1,0 +1,19 @@
+@import "utils";
+@import "variables";
+
+@import "shared/window";
+
+@import "widgets/menu";
+@import "widgets/settings";
+
+* {
+  transition: all 0.3s ease-in-out;
+}
+
+box {
+  background-color: transparent;
+}
+
+button {
+  background-color: transparent;
+}

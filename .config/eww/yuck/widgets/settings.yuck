@@ -1,0 +1,60 @@
+(defwidget settings_widget []
+  (box :orientation "v" :class { SHOW_SETTINGS ? "settings window" : "settings window hidden" } :space-evenly false 
+    (box
+      (label
+        :text "Main settings"
+        :halign "start")
+      (button
+        :halign "end"
+        :timeout "300ms"
+        :onclick "scripts/launcher.sh settings"
+        "Cerrar"))
+    (box :class "spacer")
+    (box
+      :class "separator"
+      :height 2)
+    (box
+      :class "spacer")
+    (label
+      :class "title"
+      :halign "start"
+      :valign "start"
+      :text "Card settings")
+    (box :orientation "v" :class "pl-24"
+      (for entry in sound_cards
+        (box 
+          :space-evenly false
+          :spacing 12
+          (checkbox
+            :class "checkbox"
+            :checked {jq(entry, '.active')}
+            :onchecked "pactl set-default-sink ${jq(entry, '.id')} && ./scripts/sound/sinks.sh --update-eww-sinks")
+          (label :text {jq(entry, '.name')}))))
+    (box :class "spacer")
+    (label :halign "start" :text "Volume Settings")
+    (box
+      :class "pl-24"
+      :space-evenly false
+      (scale 
+        :class "scale2"
+        :width 400
+        :value sound_system 
+        :onchange "./scripts/sound.sh --set-vol {}"
+        :max 101.0 
+        :min 1.0
+        :orientation "h")
+      (label
+        :class "label"
+        :text "${sound_system}% 󰗅")
+      (label
+        :class "label"
+        :halign "start"
+        :valign "start"
+        :class "debuger"
+        :text "Master Volume"))
+    (box :class "spacer")))
+
+    
+
+    
+  

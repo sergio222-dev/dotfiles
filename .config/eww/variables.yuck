@@ -9,12 +9,19 @@
 (defpoll uptime_time :interval "1h" "uptime -p | cut -d ',' -f1")
 
 ;; Sound variables
-(defpoll sound_system :initial 100 :interval "2s" "scripts/sound.sh --get-vol")
+;; (defpoll sound_system :initial 100 :interval "100s" "scripts/sound.sh --get-vol")
+(deflisten sound_system :initial "1" `scripts/sound_read.sh`)
+(defvar sound_cards "")
 
 ;; BOX SIZING *****
 
 ;; widget_left
 (defvar BOX_SIZE_LEFT_CONTAINER_W "5")
 (defvar BOX_SIZE_LEFT_CONTAINER_H "1.04")
-(defvar SHOW_WIDGET false)
+
+;; menu
+(defvar SHOW_MENU false)
+
+;; settings
+(defvar SHOW_SETTINGS false)
 

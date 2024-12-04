@@ -1,0 +1,12 @@
+(defwidget menu_widget []
+  (box :class { SHOW_MENU ? "menu_widget_class" : "menu_widget_class hidden"}
+    (box 
+      :orientation "v"
+      :space-evenly false 
+      :valign "center"
+      :spacing 12
+      (menu_option :text "Settings" :onclick "scripts/launcher.sh settings && scripts/launcher.sh menu" :timeout "400ms")
+      (menu_option :text "Restart" :onclick "scripts/launcher.sh dialog_window --on-yes=\"reboot\" --on-no=\"scripts/launcher.sh dialog_window\" --text=\"Are you sure?\" ")
+      (menu_option :text "Shutdown"))))
+      
+  

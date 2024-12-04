@@ -1,5 +1,5 @@
 (defwidget widget_left []
-  (box :class { SHOW_WIDGET ? "widget_left" : "widget_left widget_left_transparent"}
+  (box :class { SHOW_MENU ? "widget_left" : "widget_left widget_left_transparent"}
     (box
       :class "widget_left_container"
       :orientation "v"
@@ -13,6 +13,6 @@
         (module_widget_left_profile)
         ;; sound selector
         (module_widget_left_sound)
-        (box (label :text "OTRA"))
-      )
+        (box (label :text "OTRA")))
+      
       (box :class "widget_left_footer" :height 24))))

@@ -1,0 +1,14 @@
+(defwidget menu_option [text ?onclick ?timeout]
+  (eventbox 
+    :class "menu_option"
+    :height 120
+    :cursor "pointer"
+    (centerbox
+      :height 12
+      (box)
+      (box
+       (button
+         :timeout "${timeout ?: "200ms"}"
+         :onclick "${onclick ?: ""}"
+         "${text}"))
+      (box))))

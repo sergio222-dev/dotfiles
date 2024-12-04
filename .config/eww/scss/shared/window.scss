@@ -1,0 +1,29 @@
+.window {
+  background-color: #303030;
+  border: 2px solid #a7a386;
+  border-radius: 8px;
+  padding: 16px;
+  font-size: 24px;
+
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+
+  box-shadow: 0 46px 43px -86px rgba(255, 255, 255, 0.75) inset;
+
+  button {
+    border: 1px solid black;
+    border-radius: 80px;
+    box-shadow:
+      0 46px 43px -86px rgba(255, 255, 255, 0.75) inset,
+      1px 9px 25px -3px rgba(0, 0, 0, 0.75);
+
+    &:hover {
+      box-shadow:
+        0 46px 23px -23px rgba(167, 163, 134, 0.75) inset,
+        1px 9px 25px -3px rgba(0, 0, 0, 0.75);
+    }
+  }
+}

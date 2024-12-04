@@ -1,0 +1,60 @@
+.settings {
+  .spacer {
+    margin-top: 12px;
+  }
+
+  .label {
+    padding-right: 16px;
+  }
+
+  .checkbox {
+    all: unset;
+
+    check {
+      // -gtk-icon-source: url("./images/at.png");
+      border-radius: 50%;
+      border: 1px solid yellow;
+      &:checked {
+        color: yellow;
+        background-color: yellow;
+      }
+    }
+  }
+
+  .separator {
+    background-color: white;
+    border-radius: 8px;
+  }
+
+  .scale2 {
+    all: unset;
+    padding: 0 8px;
+  }
+
+  .scale2 slider {
+    all: unset;
+    background-color: white;
+    margin: -8px;
+    min-height: 20px;
+    min-width: 20px;
+    border-radius: 50%;
+    padding: 0;
+    border: 1px solid black;
+    color: red;
+  }
+
+  .scale2 highlight {
+    all: unset;
+    background-color: #8db312;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+  }
+
+  .scale2 trough {
+    all: unset;
+    background-color: black;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    margin: 0;
+  }
+}
